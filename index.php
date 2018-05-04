@@ -1,6 +1,5 @@
 <?php 
 
-
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -32,11 +31,11 @@ if ($result->num_rows > 0) {
         $document = array(
             // "newstitle" => $row['newstitle'],
             'title'=>$row['newstitle'],
-            'author'=>'5aebba7c8eb89ab001000029',
+            'author'=>new\MongoId('5aeb2356636a21ec1700002c'),
             'cont'=>$row['newscontent'],
-            'tags'=>['测试标签'],
+            'tags'=>['测试数据'],
             "createtime" => time(),
-            "click" => '0',
+            "click" => 0,
         );
 
         $collection->insert($document);    //插入数据
